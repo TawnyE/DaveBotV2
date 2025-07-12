@@ -1,0 +1,22 @@
+{
+  "name": "davebot-v2",
+  "version": "2.0.0",
+  "description": "A comprehensive Discord bot for community engagement, entertainment, moderation, and safety",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["discord", "bot", "moderation", "games", "community"],
+  "author": "DaveBot V2",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "sqlite3": "^5.1.6",
+    "js-yaml": "^4.1.0",
+    "uuid": "^9.0.1",
+    "node-cron": "^3.0.3",
+    "axios": "^1.6.2"
+  }
+}

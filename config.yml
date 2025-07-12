@@ -1,0 +1,116 @@
+# DaveBot V2 Configuration File
+bot:
+  name: "DaveBot V2"
+  version: "2.0.0"
+  prefix: "!"
+  status: "online"
+  activity: 
+    type: "PLAYING"
+    text: "Use /help for commands!"
+
+# Age Gate System
+age_gate:
+  enabled: true
+  reverify_after_days: 90
+  min_age: 18
+  ban_duration_days: 90
+
+# Games Configuration
+games:
+  enabled: true
+  gambling: true
+  trivia:
+    enabled: true
+    timeout_seconds: 30
+    points_per_correct: 10
+  word_games:
+    enabled: true
+    word_chain_timeout: 60
+    anagram_timeout: 45
+  mini_games:
+    enabled: true
+    reaction_timeout: 10
+    math_timeout: 15
+  events:
+    enabled: true
+    auto_events: true
+    event_interval_minutes: 30
+  hangman:
+    enabled: true
+    timeout_minutes: 10
+    max_wrong_guesses: 6
+  economy:
+    enabled: true
+    daily_amount: 100
+    starting_balance: 500
+    max_daily_streak: 30
+    shop_enabled: true
+    work_enabled: true
+    crime_enabled: true
+    rob_enabled: true
+
+# Events System
+events:
+  enabled: true
+  auto_events: true
+  event_channels: []
+  special_events:
+    double_xp: true
+    coin_rain: true
+    trivia_night: true
+    game_tournaments: true
+  scheduled_events:
+    - name: "Daily Trivia"
+      time: "20:00"
+      type: "trivia"
+      enabled: true
+    - name: "Weekend Tournament"
+      time: "15:00"
+      days: ["saturday", "sunday"]
+      type: "tournament"
+      enabled: true
+
+# Leveling System
+leveling:
+  enabled: true
+  xp_per_message: 5
+  xp_cooldown_seconds: 60
+  bonus_xp_events: true
+  level_up_rewards: true
+  reward_roles: []
+
+# Moderation Settings
+moderation:
+  enabled: true
+  log_channel: null
+  auto_timeout_duration: 300000
+  punishment_templates:
+    - name: "Spam"
+      duration: 600000
+      reason: "Spamming in chat"
+    - name: "Inappropriate"
+      duration: 3600000
+      reason: "Inappropriate behavior"
+
+# Ticket System
+tickets:
+  enabled: true
+  category_id: null
+  transcript_channel: null
+  auto_close_hours: 24
+  support_roles: []
+
+# Utility Features
+utility:
+  minecraft_checker: true
+  birthday_reminders: true
+  server_scanner: true
+
+# Logging Configuration
+logging:
+  enabled: true
+  channels:
+    moderation: null
+    level_up: null
+    birthdays: null
+    tickets: null
